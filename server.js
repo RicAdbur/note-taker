@@ -2,7 +2,7 @@
 const express = require("express");
 const pageRoutes = require("./routes/pageRoutes");
 const apiRoutes = require("./routes/apiRoutes");
-const PORT = 3000;
+const PORT= process.env.PORT || 1701; // dynamic port generation necessary for Heroku deployment
 const app = express();
 
 // middleware
