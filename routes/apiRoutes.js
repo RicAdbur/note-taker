@@ -25,7 +25,7 @@ router.post("/api/notes", async (req, res) => {
       id: nanoid()
     })
     await fs.writeFile(dbPath, JSON.stringify(notes))
-    res.json(notes)
+    res.status(201).json(notes)
   } catch(err) {
     res.status(500).send(err)
     console.error(err)
